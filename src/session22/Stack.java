@@ -1,0 +1,42 @@
+package session22;
+public class Stack {
+	int[] data;
+	int top = 0;
+	Stack(){
+		this.data = new int[5];
+	}
+	Stack(int cap){
+		this.data = new int[cap];
+	}
+	public boolean isEmpty(){
+		return this.top==0;
+	}
+	public boolean isFull(){
+		return this.top == this.data.length;
+	}
+	public void push(int item){
+		this.data[this.top] = item;
+		this.top++;
+	}
+	public int pop(){
+		this.top--;
+		int val = this.data[this.top];
+		this.data[this.top] =0;
+		return val;
+	}
+	public int peek(){
+		return this.data[this.top-1];
+	}
+	public int size(){
+		return this.top;
+	}
+	public void display(){
+		System.out.println("*******************");
+		for(int i=0;i<top;i++){
+			System.out.print(data[i]+"  ");
+		}
+		System.out.println("*********************");
+	}
+	
+	
+}

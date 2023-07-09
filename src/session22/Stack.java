@@ -14,17 +14,26 @@ public class Stack {
 	public boolean isFull(){
 		return this.top == this.data.length;
 	}
-	public void push(int item){
+	public void push(int item) throws Exception{
+		if(isFull()){
+			throw new Exception("stack is full");
+		}
 		this.data[this.top] = item;
 		this.top++;
 	}
-	public int pop(){
+	public int pop() throws Exception{
+		if(isEmpty()){
+			throw new Exception("stack is empty");
+		}
 		this.top--;
 		int val = this.data[this.top];
 		this.data[this.top] =0;
 		return val;
 	}
-	public int peek(){
+	public int peek() throws Exception{
+		if(isEmpty()){
+			throw new Exception("stack is empty");
+		}
 		return this.data[this.top-1];
 	}
 	public int size(){

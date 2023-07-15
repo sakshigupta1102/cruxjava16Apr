@@ -11,7 +11,13 @@ public class reverseQueue {
 		reverse(q);
 		q.display();
 	}
-	public static void reverse(Queue q)  {
+	public static void reverse(Queue q) throws Exception  {
+		if(q.isEmpty()){
+			return;
+		}
+		int val = q.dequeue();
+		reverse(q);
+		q.enqueue(val);
 		
 	}
 }

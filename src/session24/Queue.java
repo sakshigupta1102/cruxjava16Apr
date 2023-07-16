@@ -1,8 +1,8 @@
 package session24;
 public class Queue {
-	int[] data;
-	int front = 0;
-	int size = 0;
+	public int[] data;
+	public int front = 0;
+	public int size = 0;
 	public Queue() {
 		this.data = new int[5];
 	}

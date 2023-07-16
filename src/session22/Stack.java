@@ -1,51 +1,70 @@
 package session22;
+
 public class Stack {
-	int[] data;
-	int top = 0;
-	Stack(){
+	public int[] data;
+	public int top = 0;
+
+	public Stack() {
 		this.data = new int[5];
 	}
-	Stack(int cap){
+
+	public Stack(int cap) {
 		this.data = new int[cap];
 	}
-	public boolean isEmpty(){
-		return this.top==0;
+
+	public boolean isEmpty() {
+		return this.top == 0;
 	}
-	public boolean isFull(){
+
+	public boolean isFull() {
 		return this.top == this.data.length;
 	}
-	public void push(int item) throws Exception{
-		if(isFull()){
+
+	public void push(int item) throws Exception {
+		if (isFull()) {
 			throw new Exception("stack is full");
 		}
 		this.data[this.top] = item;
 		this.top++;
 	}
-	public int pop() throws Exception{
-		if(isEmpty()){
+
+	public int pop() throws Exception {
+		if (isEmpty()) {
 			throw new Exception("stack is empty");
 		}
 		this.top--;
 		int val = this.data[this.top];
-		this.data[this.top] =0;
+		this.data[this.top] = 0;
 		return val;
 	}
-	public int peek() throws Exception{
-		if(isEmpty()){
+
+	public int peek() throws Exception {
+		if (isEmpty()) {
 			throw new Exception("stack is empty");
 		}
-		return this.data[this.top-1];
+		return this.data[this.top - 1];
 	}
-	public int size(){
+
+	public int size() {
 		return this.top;
 	}
-	public void display(){
+
+	public void display() {
 		System.out.println("*******************");
-		for(int i=0;i<top;i++){
-			System.out.print(data[i]+"  ");
+		for (int i = 0; i < top; i++) {
+			System.out.print(data[i] + "  ");
 		}
 		System.out.println("*********************");
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < top; i++) {
+			sb.append(data[i] + "  ");
+		}
+		return sb.toString();
+
+	}
+
 }

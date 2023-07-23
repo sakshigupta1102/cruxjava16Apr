@@ -66,7 +66,6 @@ public class LinkedList {
 		}
 
 	}
-
 	public Node getNodeAt(int idx) throws Exception {
 		if (idx < 0 || idx >= this.size) {
 			throw new Exception("invalid index");

@@ -10,7 +10,7 @@ public static int fibo(int n){
 	int sp1 = fibo(n-1); //5
 	int sp2 = fibo(n-2) ;//3
 	return sp1+sp2;
-			
-	
 }
 }
+ 
+

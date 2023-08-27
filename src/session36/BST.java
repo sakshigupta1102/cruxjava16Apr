@@ -84,10 +84,24 @@ public class BST
 			printInRange(lo, hi, node.left);
 			System.out.println(node.val);
 			printInRange(lo, hi, node.right);
-		}
-		
-		
+		}	
 	}
+	public Node add(int val , Node node){
+		if(node == null){
+			Node nn = new Node(val);
+			return nn;
+		}
+		if(val < node.val){
+			node.left = add(val,node.left);
+		}else if(val > node.val){
+			node.right = add(val, node.right);
+		}
+		return node;
+	}
+	
+	
+	
+	
 	
 	
 	

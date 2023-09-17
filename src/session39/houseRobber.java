@@ -1,5 +1,4 @@
 package session39;
-
 public class houseRobber {
 	public static void main(String[] args) {
 		int[] arr = { 5, 3, 1, 11 };
@@ -25,8 +24,6 @@ public class houseRobber {
 		int dontrob = robTD(arr, i + 1, strg);
 		return strg[i] = Math.max(rob, dontrob);
 	}
-	
-	
 	public static int robBU(int[] arr){
 		int[] strg = new int[arr.length];
 		strg[0] = arr[0];
@@ -38,7 +35,6 @@ public class houseRobber {
 		} 
 	//	for(int a: strg) System.out.print(a+" ");
 		return strg[arr.length-1];
-		
 	}
 	
 	
